@@ -79,11 +79,15 @@ The final test dataset is provided as:
 
 ---
 
-## 3. GitHub Repository
+## 3. Project Links
 
-GitHub Repository:
+### GitHub Repository
 
-**[GitHub Repository Link — to be added]**
+[GitHub Repository](https://github.com/LokeshDC16/ml-assignment-2)
+
+### Live Streamlit Application
+
+[Phishing Website Classifier](https://ml-assignment-2-lokesh-2025ac05027-bits.streamlit.app/)
 
 ---
 
@@ -237,6 +241,12 @@ ml-assignment-2/
 ├── test_data.csv
 │
 ├── model/
+│   ├── logistic_regression.py
+│   ├── decision_tree.py
+│   ├── knn.py
+│   ├── naive_bayes.py
+│   ├── random_forest.py
+│   │
 │   ├── logistic_regression.joblib
 │   ├── decision_tree.joblib
 │   ├── knn.joblib
@@ -262,3 +272,82 @@ ml-assignment-2/
     │   └── target_correlation.png
     │
     └── model_comparison.csv
+```
+
+---
+
+## 9. How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/LokeshDC16/ml-assignment-2.git
+cd ml-assignment-2
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+For Windows PowerShell:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the Streamlit application
+
+```bash
+streamlit run app.py
+```
+
+The application allows the user to:
+
+- Upload the test dataset
+- Select one of the five trained models
+- View model evaluation metrics
+- View the confusion matrix
+- View the classification report
+- View the prediction summary
+
+---
+
+## 10. Reproducing the Experiment
+
+The complete ML pipeline can also be reproduced using the scripts provided in the `scripts/` directory.
+
+### Prepare the dataset
+
+```bash
+python scripts/prepare_data.py
+```
+
+### Train the models
+
+```bash
+python scripts/train_models.py
+```
+
+### Analyze model performance
+
+```bash
+python scripts/analyze_models.py
+```
+
+The trained models are saved in the `model/` directory and the model comparison results are saved in:
+
+`outputs/model_comparison.csv`
+
+The exploratory analysis plots are available in:
+
+`outputs/plots/`
